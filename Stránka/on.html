@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="sk" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Becca Diamonds</title>
+    <link rel = "icon" href ="diamond.png" type = "image/x-icon">
+  <style>
+  :root {
+    --smaller: .75;
+  }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  footer {
+    background-color: #111;
+    float: none;
+    max-width: auto;
+    border-top: solid black;
+    margin-top: 15%;
+    padding-bottom: 1%;
+  }
+  .container {
+    margin-top: 8%;
+    color: #333;
+
+    text-align: center;
+  }
+  h1 {
+    font-weight: normal;
+    letter-spacing: .125rem;
+    text-transform: uppercase;
+  }
+  li {
+    display: inline-block;
+    font-size: 1.5em;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+  }
+  li span {
+    display: block;
+    font-size: 4.5rem;
+  }
+  .emoji {
+    display: none;
+    padding: 1rem;
+  }
+  .emoji span {
+    font-size: 4rem;
+    padding: 0 .5rem;
+  }
+  .prstene2{
+    margin-top: 2%;
+    max-width: 100%;
+    display: block;
+    margin-right: 15%;
+    margin-left: 20%;
+  }
+  @media all and (max-width: 768px) {
+    h1 {
+      font-size: calc(1.5rem * var(--smaller));
+    }
+    li {
+      font-size: calc(1.125rem * var(--smaller));
+    }
+    li span {
+      font-size: calc(3.375rem * var(--smaller));
+    }
+    .kontakt3 {
+        bottom: -18%;
+        font-size: 10px;
+    }
+    footer {
+      width: 120%;
+      margin-top: 101%;
+    }
+    .prstene2 {
+      width: 100%;
+      margin-left: 10%;
+    }
+    .container {
+      margin-left: 15%;
+
+    }
+  }
+  </style>
+  </head>
+<body>
+  <header>
+    <div class="topnav">
+      <p class="vlavo">Zákaznícka podpora</p>
+      <p id="stred">ZĽAVY NA VŠETKO AŽ 30%</p>
+      <p id="pravo">30 dní na vrátenie tovaru</p>
+    </div>
+  </header>
+  <nav class="sideNav">
+    <p class="closeBtn">&times;</p>
+    <a href="index.html">Domov</a>
+    <a href="#">Pre&nbspneho</a>
+    <a href="ona.html">Pre&nbspňu</a>
+    <a href="napis.html">Zákaznícka&nbsppodpora</a>
+    <a href="#copyright">Kontakt</a>
+
+  </nav>
+  <button class="openSideNav">☰ Menu</button>
+  <script>
+  let openBtn = document.querySelector(".openSideNav");
+  openBtn.addEventListener("click", () => {
+    showNav();
+  });
+  let closeBtn = document.querySelector(".closeBtn");
+  closeBtn.addEventListener("click", () => {
+    hideNav();
+  });
+  function showNav() {
+    document.querySelector(".openSideNav").style.color = "white";
+    document.querySelector(".openSideNav").style.transition = "0s";
+     if (window.innerWidth < 768) {
+    document.querySelector(".sideNav").style.width = "100%";
+
+  } else {
+    document.querySelector(".sideNav").style.width = "30%";
+
+  }
+}
+  function hideNav() {
+    document.querySelector(".sideNav").style.width = "0";
+    document.querySelector(".openSideNav").style.color = "black";
+    document.querySelector(".openSideNav").style.transition = "1s";
+  }
+  window.addEventListener('resize', showNav);
+  </script>
+
+
+<a href="index.html"><img src="logo.png" alt="BECCA DIAMONDS" class="logo"></a>
+<a href="index.html"><img class="prstene2" src="jewellery3.png" alt="Prstene"></a>
+<div class="container">
+  <h1 id="headline">Kolekcia pre gentlemanov:</h1>
+  <div id="countdown">
+    <ul><!-- pokročilý zoznam -->
+      <li><span id="days"></span>dní</li>
+      <li><span id="hours"></span>hodín</li>
+      <li><span id="minutes"></span>minút</li>
+      <li><span id="seconds"></span>sekúnd</li>
+    </ul>
+  </div>
+  <div id="content" class="emoji">
+    <span>💍</span>
+    <span>🏃</span>
+    <span>🏃</span>
+  </div>
+</div>
+<script> <!-- kreatívny bod za countdown -->
+(function () {
+  const second = 1000,
+        minute = second * 60,
+        hour = minute * 60,
+        day = hour * 24;
+
+  let today = new Date(),
+      dd = String(today.getDate()).padStart(2, "0"),
+      mm = String(today.getMonth() + 1).padStart(2, "0"),
+      yyyy = today.getFullYear(),
+      nextYear = yyyy + 1,
+      dayMonth = "10/04/",
+      birthday = dayMonth + yyyy;
+  today = mm + "/" + dd + "/" + yyyy;
+  if (today > birthday) {
+    birthday = dayMonth + nextYear;
+  }
+  const countDown = new Date(birthday).getTime(),
+      x = setInterval(function() {
+        const now = new Date().getTime(),
+              distance = countDown - now;
+        document.getElementById("days").innerText = Math.floor(distance / (day)),
+          document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+          document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+          document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+        if (distance < 0) {
+          document.getElementById("headline").innerText = "Kolekcia pre gentlemanov už začala";
+          document.getElementById("countdown").style.display = "none";
+          document.getElementById("content").style.display = "block";
+          clearInterval(x);
+        }
+      }, 0)
+  }());
+</script>
+
+<footer>
+  <img class="footlogo" src="footerlogo.png" alt="Footer Logo"><br>
+  <div class="soc-siete">
+  <a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-instagram"></a>
+</div>
+<center>
+<p id="copyright">&copy 2021 Becca Diamonds</p>
+</center>
+<div class="kontakt3">
+<h3>Adresa:</h3>
+<adress>Becca Diamonds s.r.o<br>
+  Štefánikova 40<br>
+  Nitra - Staré mesto<br>
+  949 01</adress>
+</div>
+</footer>
+  </body>
+</html>

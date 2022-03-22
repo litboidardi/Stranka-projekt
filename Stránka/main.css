@@ -1,0 +1,405 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  width: 100%;
+  font-family: -apple-system,"Gill Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: rgb(247,247,247);
+}
+
+/* otváracie navigačné menu*/
+.sideNav {
+  float: left;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  opacity: 90%;
+}
+.sideNav a {
+padding: 8px 8px 8px 32px;
+text-decoration: none;
+font-size: 25px;
+font-family: "Gill Sans", sans-serif;
+color: #818181; /* zmena farby elementu */
+display: block;
+transition: 0.3s;
+}
+.sidenav a:hover {
+color: #f1f1f1;
+}
+.sideNav .closeBtn {
+color: #818181;
+cursor: pointer;
+position: absolute;
+top: 0;
+right: 25px;
+font-size: 36px;
+margin-left: 50px;
+}
+button {
+margin: 10px 15px 0px 10px;
+padding: 10px 15px;
+background: rgba(0,0,0,0);
+cursor: pointer;
+color: black;
+font-size: 20px;
+border: none;
+border-radius: 2%;
+float: left;
+position: sticky;
+top: 0;
+z-index: 3;
+}
+/*banner*/
+.prstene{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+.prstene4{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+/*logo*/
+img.logo {
+   position: -webkit-sticky;
+   position: sticky;
+   top: 0;
+  margin-left: 33%;
+  margin-top: 0.8%;
+  width: 250px;
+  z-index: 1;
+}
+/* vrchný banner / header */
+.topnav {
+  background-color: #111;
+  overflow: hidden;
+  border-bottom: solid black;
+  max-width: auto;
+}
+.topnav p {
+  float: left;
+  color: rgb(247,247,247);
+  text-align: center;
+  padding: 0px 16px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  width: 33.10%
+}
+
+.topnav p.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+* {box-sizing:border-box}
+.slideshow-container {
+  max-width: 500px;
+  position: relative;
+  margin: auto;
+}
+.mySlides {
+  display: none;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+.text {
+  color: black;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+
+}
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: #717171;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+.kontakt {
+  position: absolute;
+  bottom: -98%;
+  left: 4%;
+  color: rgb(247,247,247);
+}
+.kontakt1 {
+  position: absolute;
+  bottom:-102%;
+  left: 4%;
+  color: rgb(247,247,247);
+}
+.kontakt2 {
+  position: absolute;
+  bottom:-125%;
+  left: 4%;
+  color: rgb(247,247,247);
+}
+.kontakt3 {
+  position: absolute;
+  left: 4%;
+  bottom: -49%;
+  color: rgb(247,247,247);
+}
+.kontakt4 {
+  position: absolute;
+  left: 4%;
+  bottom: -152%;
+  color: rgb(247,247,247);
+
+}
+footer {
+  background-color: #111;
+  float: none;
+  max-width: auto;
+  border-top: solid black;
+  margin-top: 50%;
+  padding-bottom: 1%;
+}
+img.footlogo {
+  padding-top: 30px;
+  margin-bottom: -15px;
+  max-width: 150px;
+margin-left: 45%;
+margin-right: 45%;
+}
+.soc-siete {
+  margin-left: 45%;
+  margin-right: 45%;
+  margin-bottom: -15px;
+}
+#copyright {
+  color: rgb(247,247,247);
+}
+.about {
+  position: absolute;
+}
+.column {
+  float: left;
+  width: 25%;
+  padding: 5px;
+  position: relative;
+  display: inline-block;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.column .obr2 {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.column:hover .obr2   {
+  display: inline;
+  z-index: 2;
+}
+.cena {
+  border: none;
+  opacity: 90%;
+  outline: 0;
+  padding: 12px;
+  color: rgb(247,247,247);
+  background-color: #111;
+  text-align: center;
+  width: 100%;
+  font-size: 18px;
+  z-index: 1;
+}
+.popisok {
+  position: absolute;
+  bottom: 13%;
+  font-size: 13px;
+  text-align:center;
+  z-index: 2;
+margin-left: 20px;
+
+}
+.slideshow-full {
+  float: right;
+  margin-right: 4%;
+  margin-top: 5%;
+}
+.about {
+  float: left;
+  width: 50%;
+  font-size: 25px;
+  margin-top: 10%;
+}
+h2.limit {
+  margin-left: -22%;
+  display: block;
+  float:left;
+  margin-top: 7%;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.pagination {
+  display: inline-block;
+  float: left;
+  margin-top: 50px;
+  margin-left: 4%;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+  border-radius: 5px;
+}
+@media only screen and (max-width: 600px) {
+  body {
+    width: auto;
+    height: auto;
+  }
+.topnav {
+  width: 120%;
+  margin-right: -100px;
+}
+.topnav p {
+  font-size: 8px;
+}
+img.logo {
+  width: 40%;
+  margin-top: 1%;
+  margin-left: 14%;
+}
+button{
+margin-top: 0%;
+margin-left: 0%;
+font-size: 18px;
+
+}
+.prstene {
+  width: 100%;
+  margin-left: 10%;
+}
+.slideshow-full {
+  width: 70%;
+  margin-left: 20%;
+  margin-top: 10%;
+
+}
+.about {
+  width: 100%;
+  font-size: 12px;
+  margin-top: 92%;
+  margin-left: 0%;
+}
+
+img.footlogo {
+width: 20%;
+margin-left: 40%;
+margin-right: 40%;
+}
+.soc-siete {
+  width: 50%;
+  margin-left: 34%;
+}
+.sideNav a {
+margin-left: -2%;
+text-align: center;
+}
+footer {
+  width: 120%;
+  margin-top: 142%;
+}
+#copyright {
+  font-size: 12px;
+  margin-left: 0%;
+}
+.prstene4{
+  margin-left: 10%;
+  width: 100%;
+}
+.kontakt {
+bottom: -29%;
+font-size: 10px;
+}
+}

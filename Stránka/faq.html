@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="sk" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <title>Becca Diamonds</title>
+    <link rel = "icon" href ="diamond.png" type = "image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.button {
+  background-color: #111;
+  opacity: 85%;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0px 270px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+  body {
+    background-color: rgb(247,247,247);
+  }
+button {
+margin: 10px 15px 0px 10px;
+padding: 10px 15px;
+background: rgba(0,0,0,0);
+cursor: pointer;
+color: black;
+font-size: 20px;
+border: none;
+border-radius: 2%;
+float: left;
+position: sticky;
+top: 0;
+z-index: 3;
+}
+.pagination {
+  margin-left: 40%;
+  max-width: 100%;
+  background-color: green;
+}
+.prstene4 {
+  margin-top: -5%;
+  margin-left: 0%;
+}
+* {box-sizing: border-box;}
+
+.container {
+  border-radius: 5px;
+  background-color: #111;
+  opacity: 90%;
+  padding: 20px;
+  width: 70%;
+  margin-left: 15%;
+  margin-bottom: 5%;
+  max-width: auto;
+}
+.container p, h2, .table {
+  color: rgb(247,247,247);
+}
+footer {
+  background-color: #111;
+  float: none;
+  max-width: auto;
+  border-top: solid black;
+  margin-top: 10%;
+  padding-bottom: 1%;
+}
+@media all and (max-width: 768px) {
+  .topnav {
+  width: 165%;
+  }
+  .prstene4 {
+    width: 160%;
+  }
+  footer {
+    width: 165%;
+    margin-top: 50%;
+  }
+  .kontakt4{
+      bottom:-143%;
+      font-size: 10px;
+  }
+  .container {
+    width: 165%;
+    margin-left: 0;
+  }
+}
+</style>
+  </head>
+<body>
+
+  <header>
+    <div class="topnav">
+      <p class="vlavo">Zákaznícka podpora</p>
+      <p id="stred">ZĽAVY NA VŠETKO AŽ 30%</p>
+      <p id="pravo">30 dní na vrátenie tovaru</p>
+    </div>
+  </header>
+
+  <nav class="sideNav">
+    <p class="closeBtn">&times;</p>
+    <a href="index.html">Domov</a>
+    <a href="on.html">Pre&nbspneho</a>
+    <a href="ona.html">Pre&nbspňu</a>
+    <a href="#">Zákaznícka&nbsppodpora</a>
+    <a href="#copyright">Kontakt</a>
+
+  </nav>
+  <button class="openSideNav">☰ Menu</button>
+  <script>
+  let openBtn = document.querySelector(".openSideNav");
+  openBtn.addEventListener("click", () => {
+    showNav();
+  });
+  let closeBtn = document.querySelector(".closeBtn");
+  closeBtn.addEventListener("click", () => {
+    hideNav();
+  });
+  function showNav() {
+    document.querySelector(".openSideNav").style.color = "white";
+    document.querySelector(".openSideNav").style.transition = "0s";
+     if (window.innerWidth < 768) {
+    document.querySelector(".sideNav").style.width = "100%";
+
+  } else {
+    document.querySelector(".sideNav").style.width = "30%";
+
+  }
+}
+  function hideNav() {
+    document.querySelector(".sideNav").style.width = "0";
+    document.querySelector(".openSideNav").style.color = "black";
+    document.querySelector(".openSideNav").style.transition = "1s";
+  }
+  window.addEventListener('resize', showNav);
+  </script>
+
+<a href="index.html"><img src="logo.png" alt="BECCA DIAMONDS" class="logo"></a>
+<a href="index.html"><img class="prstene4" src="jewellery4.jpg" alt="Prstene"></a>
+
+<h1 style="margin-left: 15%;">FAQ</h1>
+
+<div class="container">
+  <h2>MÔŽEM VRÁTIŤ ALEBO VYMENIŤ OBJEDNANÝ PRODUKT?</h2>
+<p>Áno. Zákazník ma právo na vrátenie tovaru bez uvedenia dôvodu 30 dní odo dňa jeho nákupu. Naša spoločnosť dáva zákazníkovi možnosť na vrátenie, alebo výmenu tovaru až 120 dní
+  odo dňa jeho nákupu. Tovar na vrátenie alebo výmenu nemôže byť poškodený, alebo používaný.</p>
+  <h2>ČO MUSÍME VEDIEŤ PRI NÁKUPE DIAMANTOV?</h2>
+<p>Pri nákupe investičných diamantov, alebo výbere diamantov pre šperky musíte sledovať niekoľko dôležitých parametrov. Najdôležitejšie parametre sú: proporcia a spracovanie
+   výbrusu, hmotnosť, farba a čírosť kameňa.</p>
+   <h2>OBDRŽÍME K DIAMANTOM PRÍSLUŠNÉ CERTIFIKÁTY?</h2>
+   <p>Samozrejme. Na každý produkt s diamantom sa vzťahuje Doživotná záruka na diamant. Okrem toho má každý produkt Certifikát kvality.
+     Oba dokumenty budú pribalené k produktom - <u>sú garanciou legálneho drahokamu</u>.</p><!--formátovaný text-->
+  <h2>Tabuľka veľkostí:</h2>
+  <div class="table-responsive">
+  <table class="table"><!-- table bootstrap-->
+    <thead>
+      <tr>
+        <th>Obvod v mm</th>
+        <th>Veľkosť Becca Diamonds</th>
+        <th>Priemer v mm</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>45</td>
+        <td>5</td>
+        <td>14,3</td>
+      </tr>
+      <tr>
+        <td>46</td>
+        <td>6</td>
+        <td>14,6</td>
+      </tr>
+      <tr>
+        <td>47</td>
+        <td>7</td>
+        <td>15</td>
+      </tr>
+      <tr>
+        <td>48</td>
+        <td>8</td>
+        <td>15,3</td>
+      </tr>
+      <tr>
+        <td>49</td>
+        <td>9</td>
+        <td>15,6</td>
+      </tr>
+      <tr>
+        <td>50</td>
+        <td>10</td>
+        <td>15,9</td>
+      </tr>
+      <tr>
+        <td>51</td>
+        <td>11</td>
+        <td>16,2</td>
+      </tr>
+      <tr>
+        <td>52</td>
+        <td>12</td>
+        <td>16,5</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+    <ul class="pagination">
+      <li><a href="napis.html">Zákaznícka podpora</a></li>
+      <li class="active"><a href="#">FAQ</a></li>
+    </ul>
+</div>
+<div class="btn-group">
+  <a href="https://www.youtube.com/watch?v=U7yM6CMSDJM" target="_blank"><button class="button">Výroba prsteňa</button></a><!-- 2x button -->
+<a href="https://www.youtube.com/watch?v=26CH5I0wChU" target="_blank"><button class="button">Rozlíšenie diamantu</button></a>
+</div>
+
+<footer>
+  <img class="footlogo" src="footerlogo.png" alt="Footer Logo"><br>
+  <div class="soc-siete">
+  <a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-instagram"></a>
+</div>
+<center>
+<p id="copyright">&copy 2021 Becca Diamonds</p>
+</center>
+<div class="kontakt4">
+<h3>Adresa:</h3><!-- prvý nadpis -->
+<adress>Becca Diamonds s.r.o<br>
+  Štefánikova 40<br>
+  Nitra - Staré mesto<br>
+  949 01</adress>
+</div>
+</footer>
+  </body>
+</html>

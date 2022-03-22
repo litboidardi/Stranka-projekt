@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="sk" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <script src="main.js"></script>
+    <title>Becca Diamonds</title>
+    <link rel = "icon" href ="diamond.png" type = "image/x-icon">
+  </head>
+<body>
+  <header>
+    <div class="topnav">
+      <p class="vlavo">Zákaznícka podpora</p>
+      <p id="stred">ZĽAVY NA VŠETKO AŽ 30%</p> <!-- použitie 2x ID v external CSS-->
+      <p id="pravo">30 dní na vrátenie tovaru</p>
+    </div>
+  </header>
+<!-- Otváracie navigačné menu -->
+  <nav class="sideNav"> <!-- bootstrap menu + navbar + collapse -->
+    <p class="closeBtn">&times;</p><!-- použitie class 2x v external css-->
+    <a href="#">Domov</a>
+    <a href="on.html">Pre&nbspneho</a>
+    <a href="ona.html">Pre&nbspňu</a>
+    <a href="napis.html">Zákaznícka&nbsppodpora</a>
+    <a href="#copyright">Kontakt</a>
+
+  </nav>
+  <button class="openSideNav">☰ Menu</button> <!-- prvý button -->
+  <script> <!-- kreatívny bod za otvárací navbar -->
+    let openBtn = document.querySelector(".openSideNav");
+    openBtn.addEventListener("click", () => {
+      showNav();
+    });
+    let closeBtn = document.querySelector(".closeBtn");
+    closeBtn.addEventListener("click", () => {
+      hideNav();
+    });
+    function showNav() {
+      document.querySelector(".openSideNav").style.color = "white";
+      document.querySelector(".openSideNav").style.transition = "0s";
+       if (window.innerWidth < 768) {
+      document.querySelector(".sideNav").style.width = "100%";
+
+    } else {
+      document.querySelector(".sideNav").style.width = "30%";
+
+    }
+  }
+    function hideNav() {
+      document.querySelector(".sideNav").style.width = "0";
+      document.querySelector(".openSideNav").style.color = "black";
+      document.querySelector(".openSideNav").style.transition = "1s";
+    }
+    window.addEventListener('resize', showNav);
+  </script>
+
+<a href="index.html"><img src="logo.png" alt="BECCA DIAMONDS" class="logo"></a><!-- 2 odkazy -->
+<a href="index.html"><img class="prstene" src="jewellery2.jpg" alt="Prstene"></a><!--pevne stanovený obrázok + responzívny obrázok-->
+
+
+
+<div class="about"> <!-- kreatívny bod za automatický textový carousel-->
+<p class="item-1">„Ak máte 100 dolárov na to, aby ste na seba utratili, kúpte si šperky.“<br>  —  Heidi Klum</p>
+<p class="item-2">„Cnosť je ako drahokam, najlepšie vynikne, ak je proste zasadený.“<br>  —  Francis Bacon</p>
+<p class="item-3">„Milujem šperky a diamanty – som predsa žena.“<br>  —  Monica Belluci.</p>
+</div>
+<style>
+.item-1,
+.item-2,
+.item-3 {
+  position: absolute;
+  display: block;
+	top: -0.5em;
+  width: 70%;
+  font-size: 2em;
+	animation-duration: 30s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
+
+.item-1{
+	animation-name: anim-1;
+}
+
+.item-2{
+	animation-name: anim-2;
+}
+
+.item-3{
+	animation-name: anim-3;
+}
+
+@keyframes anim-1 {
+	0%, 8.3% { left: -20%; opacity: 0; }
+  8.3%,25% { left: 25%; opacity: 1; }
+  33.33%, 100% { left: 40%; opacity: 0; }
+}
+
+@keyframes anim-2 {
+	0%, 33.33% { left: -20%; opacity: 0; }
+  41.63%, 58.29% { left: 25%; opacity: 1; }
+  66.66%, 100% { left: 40%; opacity: 0; }
+}
+
+@keyframes anim-3 {
+	0%, 66.66% { left: -20%; opacity: 0; }
+  74.96%, 91.62% { left: 25%; opacity: 1; }
+  100% { left: 40%; opacity: 0; }
+}
+</style>
+
+
+
+<div class="slideshow-full">
+<!-- carousel -->
+<div class="slideshow-container">
+  <div class="mySlides fade" style="display: block;">
+    <div class="numbertext">1 / 4</div>
+    <img src="prstene/2.2.jpg" style="width:100%">
+    <div class="text">ZÁSNUBNÝ PRSTEŇ FAIRYTALE: BIELE ZLATO, MODRÝ ZAFÍR</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 4</div>
+    <img src="prstene/1.2.jpg" style="width:100%"> <!-- inline CSS -->
+    <div class="text">ZÁSNUBNÝ PRSTEŇ FAIRYTALE: RUŽOVÉ ZLATO, ČIERNY DIAMANT</div>
+  </div>
+
+  <div class="mySlides fade" >
+    <div class="numbertext">3 / 4</div>
+    <img src="prstene/3.2.jpg" style="width:100%">
+    <div class="text">ZÁSNUBNÝ PRSTEŇ THIS IS LOVE: RUŽOVÉ ZLATO, BIELY ZAFÍR</div>
+</div>
+
+<div class="mySlides fade" >
+  <div class="numbertext">4 / 4</div>
+  <img src="prstene/6.2.jpg" style="width:100%">
+  <div class="text">ZÁSNUBNÝ PRSTEŇ FAIRYTALE: BIELE ZLATO, BIELY ZAFÍR</div>
+</div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<div style="text-align:center;" class="bodky">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+</div>
+</div>
+<br>
+<footer>
+  <img class="footlogo" src="footerlogo.png" alt="Footer Logo"><br>
+  <div class="soc-siete">
+  <a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-instagram"></a>
+</div>
+<center>
+<p id="copyright">&copy 2021 Becca Diamonds</p>
+</center>
+<div class="kontakt">
+<h3>Adresa:</h3>
+<adress>Becca Diamonds s.r.o<br>
+  Štefánikova 40<br>
+  Nitra - Staré mesto<br>
+  949 01</adress>
+</div>
+</footer>
+  </body>
+</html>

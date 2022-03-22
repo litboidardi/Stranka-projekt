@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="sk" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Becca Diamonds</title>
+    <link rel = "icon" href ="diamond.png" type = "image/x-icon">
+       <style>
+       body {
+         background-color: white;
+       }
+       strike {
+         color: #818181;
+       }
+       footer {
+         margin-top: 0%;
+       }
+       @media all and (max-width: 768px) {
+         footer {
+           width: 120%;
+           margin-top: 26.8%;
+         }
+         .kontakt1{
+             bottom: -483%;
+             font-size: 10px;
+         }
+         .column {
+           width: 100%;
+           padding: none;
+           margin-left: 8%;
+         }
+         .cena {
+          margin-top: 0%;
+         }
+         .popisok {
+           margin-bottom: 10%;
+         }
+}
+       </style>
+  </head>
+<body>
+
+  <header>
+    <div class="topnav">
+      <p class="vlavo">Zákaznícka podpora</p>
+      <p id="stred">ZĽAVY NA VŠETKO AŽ 30%</p>
+      <p id="pravo">30 dní na vrátenie tovaru</p>
+    </div>
+  </header>
+
+  <nav class="sideNav">
+    <p class="closeBtn">&times;</p>
+    <a href="index.html">Domov</a>
+    <a href="on.html">Pre&nbspneho</a>
+    <a href="#">Pre&nbspňu</a>
+    <a href="napis.html">Zákaznícka&nbsppodpora</a>
+    <a href="#copyright">Kontakt</a>
+  </nav>
+  <button class="openSideNav">☰ Menu</button>
+  <script>
+  let openBtn = document.querySelector(".openSideNav");
+  openBtn.addEventListener("click", () => {
+    showNav();
+  });
+  let closeBtn = document.querySelector(".closeBtn");
+  closeBtn.addEventListener("click", () => {
+    hideNav();
+  });
+  function showNav() {
+    document.querySelector(".openSideNav").style.color = "white";
+    document.querySelector(".openSideNav").style.transition = "0s";
+     if (window.innerWidth < 768) {
+    document.querySelector(".sideNav").style.width = "100%";
+
+  } else {
+    document.querySelector(".sideNav").style.width = "30%";
+
+  }
+}
+  function hideNav() {
+    document.querySelector(".sideNav").style.width = "0";
+    document.querySelector(".openSideNav").style.color = "black";
+    document.querySelector(".openSideNav").style.transition = "1s";
+  }
+  window.addEventListener('resize', showNav);
+  </script>
+
+<a href="index.html"><img src="logo.png" alt="BECCA DIAMONDS" class="logo" style="z-index: 100;"></a>
+<a href="index.html"><img class="prstene" src="jewellery.png" alt="Prstene"></a>
+<div class="row">
+  <div class="column">
+    <img src="prstene/8.jpg" alt="prsten8" style="width:100%">
+    <img src="prstene/8.1.jpg" alt="prsten1" style="width:100%" class="obr2">
+    <p class="popisok">ZÁSNUBNÝ PRSTEŇ THIS IS LOVE: BIELE ZLATO, BIELY ZAFÍR</p>
+    <p class="cena"><strike>1289,00€</strike> 902,30€</p>
+  </div>
+  <div class="column">
+    <img src="prstene/2.jpg" alt="prsten2" style="width:100%">
+    <img src="prstene/2.1.jpg" alt="prsten1" style="width:100%" class="obr2">
+    <p class="popisok">ZÁSNUBNÝ PRSTEŇ FAIRYTALE: BIELE ZLATO, MODRÝ ZAFÍR</p>
+    <p class="cena"><strike>1085,00€</strike> 759,50€</p>
+  </div>
+  <div class="column">
+    <img src="prstene/6.jpg" alt="prsten6" style="width:100%">
+    <img src="prstene/6.1.jpg" alt="prsten1" style="width:100%" class="obr2">
+    <p class="popisok">ZÁSNUBNÝ PRSTEŇ FAIRYTALE: BIELE ZLATO, BIELY ZAFÍR</p>
+    <p class="cena"><strike>999,00€</strike> 699,30€</p>
+  </div>
+  <div class="column">
+    <img src="prstene/9.jpg" alt="prsten9" style="width:100%">
+    <img src="prstene/9.1.jpg" alt="prsten1" style="width:100%" class="obr2">
+    <p class="popisok">ZÁSNUBNÝ PRSTEŇ RAINBOW: BIELE ZLATO, QUARTZ, RUŽOVÉ ZAFÍRY, AMETYST, DIAMANTY</p>
+    <p class="cena"><strike>869,00€</strike> 608,30€</p>
+  </div>
+  <div class="column">
+    <img src="prstene/4.jpg" alt="prsten4" style="width:100%">
+    <img src="prstene/4.1.jpg" alt="prsten1" style="width:100%" class="obr2">
+    <p class="popisok">ZÁSNUBNÝ PRSTEŇ THIS IS LOVE: RUŽOVÉ ZLATO, BIELY ZAFÍR</p>
+    <p class="cena"><strike>1289,00€</strike> 902,30€</p>
+  </div>
+  <div class="column">
+    <img src="prstene/1.jpg" alt="prsten1" style="width:100%">
+    <img src="prstene/1.1.jpg" alt="prsten1" style="width:100%" class="obr2">
+    <p class="popisok">ZÁSNUBNÝ PRSTEŇ FAIRYTALE: RUŽOVÉ ZLATO, ČIERNY DIAMANT</p>
+    <p class="cena"><strike>1473,00€</strike> 1031,10€</p>
+  </div>
+  <div class="column">
+    <img src="prstene/10.jpg" alt="prsten10" style="width:100%">
+    <img src="prstene/10.1.jpg" alt="prsten1" style="width:100%" class="obr2">
+    <p class="popisok">ZÁSNUBNÝ PRSTEŇ FAIRYTALE: RUŽOVÉ ZLATO, BIELY ZAFÍR</p>
+    <p class="cena"><strike>999,00€</strike> 699,30€</p>
+  </div>
+    <div class="column" id="11">
+      <img src="prstene/11.jpg" alt="prsten11" style="width:100%">
+      <img src="prstene/11.1.jpg" alt="prsten1" style="width:100%" class="obr2">
+      <p class="popisok">ZÁSNUBNÝ PRSTEŇ THIS IS LOVE: RUŽOVÉ ZLATO, TANZANIT</p>
+      <p class="cena"><strike>1639,00€</strike> 1147,30€</p>
+    </div>
+</div>
+
+<footer>
+  <img class="footlogo" src="footerlogo.png" alt="Footer Logo"><br>
+  <div class="soc-siete">
+  <a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-instagram"></a>
+</div>
+<center>
+<p id="copyright">&copy 2021 Becca Diamonds</p>
+</center>
+<div class="kontakt1">
+<h3>Adresa:</h3>
+<adress>Becca Diamonds s.r.o<br>
+  Štefánikova 40<br>
+  Nitra - Staré mesto<br>
+  949 01</adress>
+</div>
+</footer>
+
+  </body>
+</html>
